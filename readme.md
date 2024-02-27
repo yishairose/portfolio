@@ -1,7 +1,6 @@
 # Yishai Rose's Portfolio
 
-Based upon design of this portfolio:
-https://om-sp.netlify.app/
+
 
 ## Description
 
