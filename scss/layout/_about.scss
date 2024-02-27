@@ -1,0 +1,72 @@
+.about-me {
+  transform: skewY(-4deg);
+  background-image: linear-gradient(
+    to right,
+    rgba(#1d2228, 1),
+    rgba(250, 129, 36, 1)
+  );
+  padding: 8rem 0rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  &__image-container {
+    opacity: 0;
+    transform: skewY(4deg);
+    height: 18rem;
+    width: 18rem;
+    position: absolute;
+    top: 2.2rem;
+    left: 12.5%;
+    z-index: 1;
+    clip-path: polygon(
+      50% 0%,
+      83% 12%,
+      100% 43%,
+      94% 78%,
+      68% 100%,
+      32% 100%,
+      6% 78%,
+      0% 43%,
+      17% 12%
+    );
+
+    img {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%);
+      clip-path: polygon(
+        50% 0%,
+        83% 12%,
+        100% 43%,
+        94% 78%,
+        68% 100%,
+        32% 100%,
+        6% 78%,
+        0% 43%,
+        17% 12%
+      );
+      transition: all 0.5s;
+    }
+    &:hover > img {
+      filter: grayscale(100%) blur(4px) brightness(50%);
+    }
+  }
+  &__paragraph {
+    transform: skewY(4deg) translateY(300px);
+    background-color: rgba(#1d2228, 0.5);
+    padding: 6.5rem 9rem;
+    border-radius: 3rem;
+    width: 60%;
+  }
+}
+
+.paragraph-visible {
+  transform: skewY(4deg) translateY(0);
+  transition: all 1.2s;
+}
+.image-visible {
+  opacity: 1;
+  transition: all 1.8s;
+}

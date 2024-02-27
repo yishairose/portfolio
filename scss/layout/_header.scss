@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  height: 95vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#1d2228, 0.95),
+    20%,
+    rgba(#1d2228, 0.95)
+  );
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15rem;
+    overflow: hidden;
+  }
+  &__paragraph {
+    width: 75%;
+    text-align: center;
+  }
+  &__icon-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+}

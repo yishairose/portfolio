@@ -1,0 +1,33 @@
+.heading {
+  color: var(--color-primary);
+}
+.heading-main {
+  font-size: 12rem;
+  font-weight: 500;
+  background: rgb(251, 129, 34);
+  background: radial-gradient(
+    circle,
+    rgba(251, 129, 34, 1) 42%,
+    rgba(225, 226, 226, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.heading-section {
+  color: var(--color-primary);
+  font-size: 8rem;
+  letter-spacing: 0.5rem;
+}
+
+.heading-small {
+  font-size: 4rem;
+  font-weight: 300;
+}
+.paragraph {
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-light);
+}

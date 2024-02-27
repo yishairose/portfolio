@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 62.5%; //1rem = 10px
+}
+body {
+  box-sizing: border-box;
+  background-color: var(--color-dark);
+  font-family: Roboto, sans-serif;
+}
+a,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}

@@ -1,0 +1,13 @@
+.icon {
+  height: 5rem;
+  width: 5rem;
+  font-size: 5rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s;
+  &:hover {
+    color: var(--color-primary-dark);
+    transform: scale(1.2);
+  }
+}
