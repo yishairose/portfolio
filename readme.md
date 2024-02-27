@@ -1,5 +1,10 @@
 # Yishai Rose's Portfolio
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1fa43b8d0949fb708f45e35035b873e768b369a8
 ## Description
 
 An in-depth paragraph about your project and overview of use.
