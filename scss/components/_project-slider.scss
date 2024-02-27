@@ -39,6 +39,7 @@
     padding: 1rem 1.8rem;
     border-radius: 16px;
     transition: all 0.2s;
+    color: var(--color-light);
     &:hover {
       transform: scale(1.1);
       background-color: var(--color-primary-dark);

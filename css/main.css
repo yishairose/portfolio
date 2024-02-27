@@ -312,6 +312,7 @@ a:active {
   padding: 1rem 1.8rem;
   border-radius: 16px;
   transition: all 0.2s;
+  color: var(--color-light);
 }
 .project-section__btn:hover {
   transform: scale(1.1);
