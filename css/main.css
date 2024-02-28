@@ -24,6 +24,26 @@ a:active {
   text-decoration: none;
 }
 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 768px) {
+  html {
+    font-size: 35%;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 520px) {
+  html {
+    font-size: 25%;
+  }
+}
+@media all and (max-width: 480px) {
+  html {
+    font-size: 15%;
+  }
+}
 :root {
   --color-primary: #fb8122;
   --color-primary-dark: #b85c17;
@@ -129,7 +149,6 @@ a:active {
 
 .skill-section {
   width: 100%;
-  padding: 5rem 8rem;
 }
 .skill-section__header {
   display: flex;
@@ -143,12 +162,22 @@ a:active {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-items: center;
+  width: 100%;
   grid-row-gap: 10rem;
+  grid-column-gap: 2.5rem;
   padding: 5rem 8rem;
 }
 .skill-section__icons--icon {
+  cursor: pointer;
   height: 15rem;
   width: 15rem;
+}
+.skill-section__icons--icon:hover {
+  animation-name: spin;
+  animation-duration: 5s;
+  animation-iteration-count: 10;
+  animation-timing-function: linear;
+  animation-direction: alternate;
 }
 .skill-section__icons--caption {
   color: var(--color-light);
@@ -162,8 +191,21 @@ a:active {
   transition: all 3.5s;
 }
 
-.project-section__header {
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: scale(0.5, 0.5) rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(-360deg) scale(1, 1);
+  }
+}
+.project-section {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -191,7 +233,7 @@ a:active {
 }
 
 .header__nav {
-  width: 100%;
+  width: 100vw;
   display: flex;
   position: fixed;
   padding: 2rem 3.5rem;
@@ -319,6 +361,19 @@ a:active {
   background-color: var(--color-primary-dark);
 }
 
+@media all and (min-width: 480px) and (max-width: 1024px) {
+  .project-section__project {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-section__details {
+    padding: 2rem 2.8rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+}
 .form-container {
   width: 400px;
   background: linear-gradient(var(--color-dark), #212121) padding-box, linear-gradient(145deg, transparent 35%, var(--color-primary), var(--color-light)) border-box;

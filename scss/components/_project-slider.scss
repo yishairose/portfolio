@@ -46,3 +46,22 @@
     }
   }
 }
+
+@media all and (min-width: 480px) and (max-width: 1024px) {
+  .project-section {
+    &__project {
+      display: flex;
+      flex-direction: column;
+    }
+    &__details {
+      padding: 2rem 2.8rem;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 6rem;
+    }
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+}

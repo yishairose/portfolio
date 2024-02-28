@@ -1,6 +1,5 @@
 .skill-section {
   width: 100%;
-  padding: 5rem 8rem;
 
   &__header {
     display: flex;
@@ -14,11 +13,21 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
+    width: 100%;
     grid-row-gap: 10rem;
+    grid-column-gap: 2.5rem;
     padding: 5rem 8rem;
     &--icon {
+      cursor: pointer;
       height: 15rem;
       width: 15rem;
+      &:hover {
+        animation-name: spin;
+        animation-duration: 5s;
+        animation-iteration-count: 10;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+      }
     }
     &--caption {
       color: var(--color-light);
@@ -31,4 +40,18 @@
 .visible {
   opacity: 1;
   transition: all 3.5s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  50% {
+    transform: scale(0.5, 0.5) rotateZ(180deg);
+  }
+
+  100% {
+    transform: rotateZ(-360deg) scale(1, 1);
+  }
 }
