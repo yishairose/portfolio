@@ -119,3 +119,9 @@
   background-color: #fff;
   border-color: #fff;
 }
+
+@media all and (max-width: 480px) {
+  .form-container {
+    width: 80%;
+  }
+}

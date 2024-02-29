@@ -31,3 +31,13 @@
     gap: 3rem;
   }
 }
+
+@media all and (max-width: 480px) {
+  .header {
+    height: 50vh;
+    &__paragraph {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

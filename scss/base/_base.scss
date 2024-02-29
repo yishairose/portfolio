@@ -20,23 +20,20 @@ a:visited,
 a:active {
   text-decoration: none;
 }
+
 @media all and (min-width: 768px) and (max-width: 1024px) {
   html {
-    font-size: 50%;
+    font-size: 50%; //1rem = 8px
   }
 }
-@media all and (min-width: 480px) and (max-width: 768px) {
+
+@media all and (min-width: 480px) and (max-width: 1024) {
   html {
-    font-size: 35%;
-  }
-}
-@media all and (min-width: 480px) and (max-width: 520px) {
-  html {
-    font-size: 25%;
+    font-size: 50%; //1rem = 8px
   }
 }
 @media all and (max-width: 480px) {
   html {
-    font-size: 15%;
+    font-size: 25%; //1rem = 4px
   }
 }

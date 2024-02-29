@@ -1,5 +1,8 @@
 .skill-section {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__header {
     display: flex;
@@ -13,6 +16,7 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
+    justify-content: center;
     width: 100%;
     grid-row-gap: 10rem;
     grid-column-gap: 2.5rem;
@@ -53,5 +57,13 @@
 
   100% {
     transform: rotateZ(-360deg) scale(1, 1);
+  }
+}
+
+@media all and (max-width: 480px) {
+  .skill-section {
+    &__icons {
+      grid-template-columns: 1fr;
+    }
   }
 }

@@ -70,3 +70,33 @@
   opacity: 1;
   transition: all 1.8s;
 }
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .about-me {
+    &__paragraph {
+      padding: 6.5rem 9rem;
+      margin: 0 1rem;
+      border-radius: 3rem;
+      width: 90%;
+    }
+    &__image-container {
+      position: absolute;
+      top: -1rem;
+      left: 80%;
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  .about-me {
+    &__paragraph {
+      padding: 6.5rem 9rem;
+      margin: 0 1rem;
+      border-radius: 3rem;
+      width: 100%;
+    }
+    &__image-container {
+      position: absolute;
+      top: -1rem;
+      left: 80%;
+    }
+  }
+}
