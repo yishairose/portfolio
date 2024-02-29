@@ -32,9 +32,18 @@
   }
 }
 
-@media all and (max-width: 480px) {
+@media all and (min-width: 480px) and (max-width: 768px) {
   .header {
     height: 50vh;
+    &__paragraph {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+@media all and (max-width: 480px) {
+  .header {
+    height: 100vh;
     &__paragraph {
       width: 100%;
       text-align: center;
