@@ -369,104 +369,141 @@ a:active {
   transform: scale(1.2);
 }
 
-.project-section__slider {
+.project__grid {
   display: flex;
   justify-content: center;
-}
-.project-section__project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--color-light);
-  padding: 0 8rem;
-}
-.project-section__details {
-  background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(35px);
-  backdrop-filter: blur(35px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  padding: 2rem 2.8rem;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-right: -9.8rem;
-}
-.project-section__title {
-  color: var(--color-primary);
-}
-.project-section__description {
-  font-size: 1.8rem;
-  line-height: 2.5rem;
-}
-.project-section__btn {
-  font-size: 1.8rem;
-  border: 2px solid var(--color-primary);
-  align-self: start;
-  padding: 1rem 1.8rem;
-  border-radius: 16px;
-  transition: all 0.2s;
-  color: var(--color-light);
-}
-.project-section__btn:hover {
-  transform: scale(1.1);
-  background-color: var(--color-primary-dark);
+  flex-wrap: wrap;
+  gap: 8rem;
+  margin-top: 4rem;
 }
 
-.container {
+.myCard {
   width: 300px;
-  height: 294px;
-  perspective: 900px;
+  height: 325px;
+  perspective: 1000px;
 }
 
-.card {
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
+.myCard--land {
+  width: 580px;
+  height: 325px;
+  perspective: 1000px;
+}
+
+.innerCard {
   position: relative;
-  transition: transform 1500ms;
-  transform-style: preserve-3d;
-  border-radius: 2rem;
-}
-
-.container:hover > .card {
-  cursor: pointer;
-  transform: rotateY(180deg) rotateZ(180deg);
-}
-
-.front,
-.back {
-  height: 100%;
   width: 100%;
-  border-radius: 2rem;
-  position: absolute;
-  backface-visibility: hidden;
-  color: var(--color-light);
-  background: linear-gradient(-135deg, rgba(232, 228, 228, 0), rgba(182, 171, 171, 0));
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
 }
 
-.front,
-.back {
+.myCard:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+.frontSide,
+.backSide {
+  position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  padding: 2rem 3.5rem;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 1rem;
+  color: white;
+  font-weight: 700;
 }
 
-.back {
-  transform: rotateY(180deg) rotateZ(180deg);
-  border: 1px solid whitesmoke;
+.card__img {
+  height: auto;
+  width: 100%;
+  height: 100%;
 }
 
-.back-heading,
-.front-heading {
-  font-size: 28px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
+.backSide,
+.backSide::before {
+  background-image: linear-gradient(160deg, var(--color-primary) 0%, var(--color-light-dark) 100%);
+}
+
+.backSide {
+  transform: rotateY(180deg);
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+.card {
+  width: 280px;
+  height: 254px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+}
+
+.circle {
+  padding: 0 4px;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 10px;
+  font-size: 14px;
+  color: var(--color-light);
+  line-height: 1.4;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 20px;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.card__button {
+  padding: 15px;
+  border-radius: 8px;
+  background: var(--color-primary-dark);
+  border: none;
+  cursor: pointer;
+  margin-right: 0.8rem;
+}
+
+.secondary {
+  background: transparent;
+  color: #777;
+  border: 1px solid #777;
+}
+
+.card__content {
+  max-width: 38rem;
 }
 
 .form-container {
