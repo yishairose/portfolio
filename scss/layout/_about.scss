@@ -55,6 +55,7 @@
   }
   &__paragraph {
     transform: skewY(4deg) translateY(300px);
+    opacity: 0;
     background-color: rgba(#1d2228, 0.5);
     padding: 6.5rem 9rem;
     border-radius: 3rem;
@@ -63,8 +64,9 @@
 }
 
 .paragraph-visible {
+  opacity: 1;
   transform: skewY(4deg) translateY(0);
-  transition: all 1.2s;
+  transition: transform 1.2s;
 }
 .image-visible {
   opacity: 1;

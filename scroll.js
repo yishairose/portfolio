@@ -62,3 +62,20 @@ const observer = new IntersectionObserver(callBack, {
 });
 
 observer.observe(skillSection);
+
+//Scroll into view
+document
+  .querySelector(".header__nav-bar")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+
+    if (e.target.classList.contains("header__nav-link")) {
+      const navHeight = document
+        .querySelector(".header__nav")
+        .getBoundingClientRect().height;
+      const id = e.target.getAttribute("href");
+      const targetYPos = document.querySelector(id).getBoundingClientRect().y;
+      const yOffset = window.pageYOffset;
+      window.scrollTo(0, targetYPos + yOffset - navHeight);
+    }
+  });
